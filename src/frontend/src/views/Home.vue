@@ -25,7 +25,7 @@
             <th scope="row">{{race.race_id}}</th>
             <td>{{ race.place }}</td>
             <td>{{ race.date }}</td>
-            <td>{{ race.time }}</td>
+            <td>{{ race.time.substring(0, race.time.lastIndexOf(":")) }}</td>
             <td>{{ this.bets[race.race_id] }}</td>
             <td>
               <div class="d-flex gap-2">
