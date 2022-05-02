@@ -1,22 +1,23 @@
 # HorseBetWebApplication
 
 ## Project setup
+### To run Vue Frontend
 In the terminal navigate to frontend and type:
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-To run the server, next type:
-```
 npm run serve
 ```
 
-### To run spring backend
-In your IDE run TeliaApplication.java OR in terminal navigate to com.example.telia:
+### To run Spring Backend
+In your IDE run TeliaApplication.java OR in terminal navigate to build.libs and type:
 ```
-javac TeliaApplication.java
-java TeliaApplication
+java -jar telia-0.0.1-SNAPSHOT.jar
 ```
 
-### This project requires you to have npm + Java installed
+### This project requires you to have Node.js + Java 11+ installed
+
+Useful links:
+
+Node.js download - https://nodejs.org/en/download/
+
+Java 18 download - https://www.oracle.com/java/technologies/downloads/#jdk18-windows
