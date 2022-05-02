@@ -1,6 +1,6 @@
 package com.example.telia.controller;
 
-import com.example.telia.Dao.UserDao;
+import com.example.telia.dao.UserDao;
 import com.example.telia.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

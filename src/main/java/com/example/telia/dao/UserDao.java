@@ -1,4 +1,4 @@
-package com.example.telia.Dao;
+package com.example.telia.dao;
 
 import com.example.telia.model.User;
 import com.example.telia.repository.UserRepository;
@@ -26,6 +26,10 @@ public class UserDao {
             return user;
         }
         throw new Exception("Username taken");
+    }
+
+    public void deleteUser(User user) {
+        userRepository.delete(user);
     }
 
     public Optional<User> getUser(User user) throws Exception {

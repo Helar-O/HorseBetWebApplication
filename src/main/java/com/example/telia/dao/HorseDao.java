@@ -1,4 +1,4 @@
-package com.example.telia.Dao;
+package com.example.telia.dao;
 
 import com.example.telia.model.Horse;
 import com.example.telia.repository.HorseRepository;

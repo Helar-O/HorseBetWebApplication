@@ -1,4 +1,4 @@
-package com.example.telia.Dao;
+package com.example.telia.dao;
 
 import com.example.telia.model.Bet;
 import com.example.telia.model.Participant;
@@ -57,9 +57,10 @@ public class BetDao {
     }
 
     public ArrayList<Pair<Race, String>> getUserActiveBets(int user_id) {
+        List<Race> activeRaces = raceDao.getOngoingRaces();
         ArrayList<Pair<Race, String>> bets = new ArrayList<>();
         for (Bet bet : getBets()) {
-            if (bet.getParticipantid().getRaceid().getWinner() == null &&
+            if (activeRaces.contains(bet.getParticipantid().getRaceid()) &&
                     bet.getUserid().getUser_id() == user_id) {
                 bets.add(Pair.of(bet.getParticipantid().getRaceid(),
                         (bet.getParticipantid().getColor() + " " + bet.getParticipantid().getHorseid().getName())));
@@ -74,7 +75,8 @@ public class BetDao {
         for (Bet bet : getBets()) {
             if (previousRaces.contains(bet.getParticipantid().getRaceid()) &&
                     bet.getUserid().getUser_id() == user_id &&
-                    bet.getParticipantid().getRaceid().getWinner().getUserid().getUser_id() == user_id) {
+                    bet.getParticipantid().getRaceid().getWinner().getHorse_id() ==
+                            bet.getParticipantid().getHorseid().getHorse_id()) {
                 bets.add(Pair.of(bet.getParticipantid().getRaceid(),
                         (bet.getParticipantid().getColor() + " " + bet.getParticipantid().getHorseid().getName())));
             }

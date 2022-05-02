@@ -1,6 +1,6 @@
 package com.example.telia.controller;
 
-import com.example.telia.Dao.BetDao;
+import com.example.telia.dao.BetDao;
 import com.example.telia.model.Bet;
 import com.example.telia.model.Race;
 import org.springframework.beans.factory.annotation.Autowired;
