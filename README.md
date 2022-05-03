@@ -2,14 +2,14 @@
 
 ## Project setup
 ### To run Vue Frontend
-In the terminal navigate to frontend and type:
+In the terminal navigate to src/frontend and type:
 ```
 npm install
 npm run serve
 ```
 
 ### To run Spring Backend
-In your IDE run TeliaApplication.java OR in terminal navigate to build.libs and type:
+In your IDE run TeliaApplication.java OR in terminal navigate to build/libs and type:
 ```
 java -jar telia-0.0.1-SNAPSHOT.jar
 ```
